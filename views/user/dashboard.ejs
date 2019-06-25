@@ -1,0 +1,125 @@
+<% include ../partials/header %>
+
+    <div class="container">
+        <div class="display-4 mb-2">Fill Application Form</div>
+         <form  action="/apply" enctype="multipart/form-data" method="POST">
+            <div class="card p-2">
+                <h4 class="h4 mx-2">Student Personal Details</h4>
+                <div class="form-group ml-2 mr-5">
+                    <label for="firstName">Name *</label>
+                    <input type="text" class="form-control mb-2" id="firstName" placeholder="First Name" name="student[firstName]" required>
+                    <input type="text" class="form-control" placeholder="Last Name" name="student[lastName]" required>
+                </div>
+                <div class="form-group ml-2 mr-5">
+                    <label for="email">Email Id *</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email id" name="student[email]" required>
+                </div>
+                <div class="form-group ml-2 mr-5">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Phone Number" name="student[phone]" required>
+                </div>
+                <div class="form-group ml-2 mr-5">
+                    <label for="dob">Date Of Birth *</label>
+                    <input type="date" class="form-control" id="dob" name="student[dob]" required>
+                </div>
+                <div class="form-group ml-2 mr-5">
+                    <label for="aadhar">Aadhar Card Number *</label>
+                    <input type="number" class="form-control" id="aadhar" name="student[aadhar]" min="100000000000" required>
+                </div>
+                <div class="form-group ml-2 mr-5">
+                  <label for="year">Religion *</label>
+                  <select class="form-control" id="year" name="student[religion]">
+                    <option>Hindu</option>
+                    <option>Islam</option>
+                    <option>Christianity</option>
+                    <option>Others</option>
+                  </select>
+                </div>
+                <div class="form-group ml-2 mr-5">                
+                    <label for="address">Permanent Address *</label>
+                    <textarea class="form-control" id="address" name="student[addressP]" rows="3" required></textarea>
+                </div>
+                <div class="form-group ml-2 mr-5">                
+                    <label for="address">Correspondence Address *</label>
+                    <textarea class="form-control" id="address" name="student[addressC]" rows="3" required></textarea>
+                </div>
+                <div class="custom-file ml-2">
+                    <input type="file" name="photo" class="custom-file-input" accept="image/x-png,image/gif,image/jpeg" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" required>
+                    <label class="custom-file-label" for="inputGroupFile01">Upload photo</label>
+                </div><br>
+            </div><br>
+            <div class="card p-2">
+                <h4 class="h4 mx-2">Guardian Personal Details</h4>
+                <div class="form-group ml-2 mr-5">
+                    <label for="firstName">Name *</label>
+                    <input type="text" class="form-control mb-2" id="firstName" placeholder="First Name" name="student[guardFirstName]" required>
+                    <input type="text" class="form-control" placeholder="Last Name" name="student[guardLastName]" required>
+                </div>
+                <div class="form-group ml-2 mr-5">
+                    <label for="email">Email Id *</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email id" name="student[guardEmail]" required>
+                </div>
+                <div class="form-group ml-2 mr-5">
+                    <label for="phone">Phone *</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Phone Number" name="student[guardPhone]" required>
+                </div>
+            </div><br>
+            <div class="card p-2">
+                <h4 class="h4 mx-2">Student Academic Details</h4>
+                <div class="form-group ml-2 mr-5">
+                    <label for="qualification">Highest Qualification *</label>
+                    <select class="form-control" id="qualification" name="student[qualification]">
+                    <option>Higher Secondary</option>
+                    <option>Secondary</option>
+                    <option>Graduate</option>
+                    <option>Post Graduate</option>
+                    </select>                
+                </div>
+                <div class="form-group ml-2 mr-5">
+                    <label for="board">Board/University *</label>
+                    <select class="form-control" id="board" name="student[board]">
+                    <option>State Board</option>
+                    <option>CBSE</option>
+                    <option>Any University</option>
+                    <option>Others</option>
+                  </select>
+                </div>
+                <div class="form-group ml-2 mr-5">
+                    <label for="institution">Name of Institution *</label>
+                    <input type="text" class="form-control" id="institution" name="student[institution]" required>
+                </div>
+                <div class="form-group ml-2 mr-5">
+                    <label for="percentage">Percentage *</label>
+                    <input type="number" class="form-control" id="percentage" placeholder="Percentage" min="0" max="100" step=".01" name="student[percentage]" required>
+                </div>
+                <div class="form-group ml-2 mr-5">
+                    <label for="register">Register Number *</label>
+                    <input type="text" class="form-control" id="register" name="student[register]" required>
+                </div>
+                <div class="form-group ml-2 mr-5">
+                  <label for="year">Year of passing *</label>
+                  <select class="form-control" id="year" name="student[yearPass]">
+                    <option>2018</option>
+                    <option>2017</option>
+                    <option>2016</option>
+                    <option>2015</option>
+                    <option>2014</option>
+                    <option>2013</option>
+                    <option>2012</option>
+                    <option>2011</option>
+                    <option>2010</option>
+                    <option>2009</option>
+                    <option>2008</option>
+                  </select>
+                </div>
+                <div class="custom-file ml-2">
+                    <input type="file" name="image" class="custom-file-input" accept="image/x-png,image/gif,image/jpeg" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" required>
+                    <label class="custom-file-label" for="inputGroupFile01">Upload class 12 certificate(image formats only)</label>
+                </div>
+            </div><br>
+            <button type="submit" class="btn btn-outline-success btn-lg mb-2">Apply</button>
+        
+        </form>
+    
+    </div>
+<% include ../partials/footer %>

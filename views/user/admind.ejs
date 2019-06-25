@@ -1,0 +1,37 @@
+<% include ../partials/header %>
+             <% var i=0 %>
+<div class="container">
+    <div class="card p-2">
+        <h3 class="h3">All Applications</h3>
+        <br>
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <th scope="col">#</th>
+                <th scope="col">Application Number</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Board/University</th>
+                <th scope="col">Marks Obtained</th>
+            </thead>
+             <tbody>
+            <% applications.forEach(function(application){ %>
+            
+                <thead>
+                    <th scope="row"><%=++i%></th>
+                    <td><%= application.applicationnum %></td>
+                    <td><%= application.firstName %></td>
+                    <td><%= application.lastName %></td>
+                    <td><%= application.email %></td>
+                    <td><%= application.phone %></td>
+                    <td><%= application.board %></td>
+                    <td><%= application.percentage %>%</td>
+                </thead>
+            
+            <% }) %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<% include ../partials/footer %>

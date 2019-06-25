@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Print Application Form</title>
+	<script type="text/javascript">window.print();</script>
+</head>
+<body>
+	<h1 style="text-align: center;">Lorem Ipsum Institute</h1>
+	<p style="text-align: center; font-size: 18px;">Address of the institute</p><br>
+	<h2 style="text-align: center;">APPLICATION FORM</h2><br>
+	<div style="width: 60%; float: left; flex-wrap: flex;">
+		<p style="font-size: 20px;"><label>APPLICATION NUMBER :</label> <%= application.applicationnum %></p>	
+		<p style="font-size: 20px;"><label>NAME :</label> <%= application.firstName %>&nbsp;<%= application.lastName %></p>
+		<p style="font-size: 20px;"><label>EMAIL :</label> <%= application.email %></p>
+		<p style="font-size: 20px;"><label>PHONE :</label> <%= application.phone %></p>
+		<p style="font-size: 20px;"><label>DATE OF BIRTH :</label> <%= application.dob.getDate() %>/<%= application.dob.getMonth() %>/<%= application.dob.getFullYear() %></p>
+		<p style="font-size: 20px;"><label>AADHAR NUMBER :</label> <%= application.aadhar %></p>
+		<p style="font-size: 20px;"><label>RELIGION :</label> <%= application.religion %></p>
+		<p style="font-size: 20px;"><label>ADDRESS :</label> <%= application.addressP %></p>
+	</div>
+	<div style="width: 40%; float: left; flex-wrap: flex;">
+		<img src="/<%= application.photo %>" style="margin-left: 10%;" width="180px" height="200px">
+	</div>
+	<br>
+	<div style="width: 100%; float: right;">
+		<p style="font-size: 20px;"><label>GUARDIAN NAME :</label> <%= application.guardFirstName %>&nbsp;<%= application.guardLastName %></p>
+		<p style="font-size: 20px;"><label>GUARDIAN EMAIL :</label> <%= application.guardEmail %></p>
+		<p style="font-size: 20px;"><label>GUARDIAN PHONE :</label> <%= application.guardPhone %></p>
+	</div>
+	<div style="width: 100%; float: right;">
+		<p style="font-size: 20px;"><label>QUALIFICATION :</label> <%= application.qualification %></p>
+		<p style="font-size: 20px;"><label>BOARD/UNIVERSITY :</label> <%= application.board %></p>
+		<p style="font-size: 20px;"><label>REGISTER NUMBER :</label> <%= application.register %></p>
+		<p style="font-size: 20px;"><label>YEAR OF PASSING :</label> <%= application.yearPass %></p>		
+		<p style="font-size: 20px;"><label>PERCENTAGE :</label> <%= application.percentage %>%</p>
+		<br>
+	</div>
+	
+
+</body>
+</html>
